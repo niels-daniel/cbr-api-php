@@ -20,7 +20,7 @@ This way you are able to handle the following operations:
 You can install the package via composer:
 
 ```bash
-composer require metmax/cbr-api-php
+composer require metmax-io/cbr-api-php
 ```
 
 Create the environment file
