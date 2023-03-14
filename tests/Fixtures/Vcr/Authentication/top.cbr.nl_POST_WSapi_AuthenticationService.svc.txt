@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+content-type: text/xml; charset=utf-8
+server: Webserver
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+server-timing: dtSInfo;desc="0", dtRpid;desc="-16553446"
+set-cookie: dtCookie=v_4_srv_7_sn_3E56F9D93EDE9AB8CF5FEAF1B2A28BF7_perc_100000_ol_0_mul_1_app-3A219dc2ed5b47ee33_0; Path=/; Domain=.cbr.nl
+date: Mon, 13 Mar 2023 17:37:26 GMT
+content-length: 684
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><s:Header><o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"><u:Created>2023-03-13T17:37:27.699Z</u:Created><u:Expires>2023-03-13T17:42:27.699Z</u:Expires></u:Timestamp></o:Security></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><PasswordExpirationDate xmlns="http://www.cbr.nl/wsapi/2008/01">2023-05-25T00:00:00</PasswordExpirationDate></s:Body></s:Envelope>

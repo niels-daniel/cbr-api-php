@@ -1,0 +1,55 @@
+{
+    "name": "metmax-io/cbr-api-php",
+    "description": "CBR Top WSAPI client wrapper",
+    "keywords": [
+        "MetMax",
+        "cbr-api-php",
+        "CBR Top"
+    ],
+    "homepage": "https://github.com/metmax-io/cbr-api-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen de Haar",
+            "email": "jeroen@metmax.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/psr7": "^2.4",
+        "php-soap/psr18-wsse-middleware": "^2.1",
+        "phpro/soap-client": "^2.4",
+        "symfony/http-client": "^6.2",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.2",
+        "php-http/vcr-plugin": "^1.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MetMax\\Cbr\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MetMax\\Cbr\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
