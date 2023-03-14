@@ -4,6 +4,7 @@ namespace MetMax\Cbr\ReferenceData;
 
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr18ClientDiscovery;
+use MetMax\Cbr\Cbr;
 use Phpro\SoapClient\Caller\EngineCaller;
 use Phpro\SoapClient\Caller\EventDispatchingCaller;
 use Phpro\SoapClient\Soap\DefaultEngineFactory;
@@ -18,7 +19,7 @@ class ReferenceDataClientFactory
     public static function factory(string $username, string $password): ReferenceDataClient
     {
         $engine = DefaultEngineFactory::create(
-            ExtSoapOptions::defaults('https://top.cbr.nl/WSapi/ReferenceDataService.svc?singleWsdl', [])
+            ExtSoapOptions::defaults(Cbr::WSDL_REFERENCE_DATA, [])
                 ->withClassMap(ReferenceDataClassmap::getCollection()),
             Psr18Transport::createForClient(
                 new PluginClient(Psr18ClientDiscovery::find(), [
