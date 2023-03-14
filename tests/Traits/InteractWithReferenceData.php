@@ -28,7 +28,7 @@ trait InteractWithReferenceData
             return $this->referenceDataClient;
         }
 
-        $recorder = new FilesystemRecorder(VCR_CASSETTE_DIR . '/ReferenceData');
+        $recorder = new FilesystemRecorder(VCR_CASSETTE_DIR.'/ReferenceData');
         $namingStrategy = new PathNamingStrategy(['hash_body_methods' => []]);
         $caller = new EngineCaller(
             DefaultEngineFactory::create(

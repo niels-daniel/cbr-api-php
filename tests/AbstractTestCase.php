@@ -11,7 +11,7 @@ abstract class AbstractTestCase extends TestCase
     {
         parent::__construct();
 
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+        $dotenv = Dotenv::createImmutable(__DIR__.'/..');
         $dotenv->load();
     }
 }

@@ -28,7 +28,7 @@ trait InteractWithAuthentication
             return $this->authenticationClient;
         }
 
-        $recorder = new FilesystemRecorder(VCR_CASSETTE_DIR . '/Authentication');
+        $recorder = new FilesystemRecorder(VCR_CASSETTE_DIR.'/Authentication');
         $namingStrategy = new PathNamingStrategy(['hash_body_methods' => []]);
         $caller = new EngineCaller(
             DefaultEngineFactory::create(

@@ -1,8 +1,8 @@
 # CBR Top WSAPI client wrapper
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/metmax/cbr-api-php.svg?style=flat-square)](https://packagist.org/packages/metmax/cbr-api-php)
-[![Tests](https://img.shields.io/github/actions/workflow/status/metmax/cbr-api-php/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/metmax/cbr-api-php/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/metmax/cbr-api-php.svg?style=flat-square)](https://packagist.org/packages/metmax/cbr-api-php)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/metmax/cbr-api-php.svg?style=flat-square)](https://packagist.org/packages/metmax-io/cbr-api-php)
+[![Tests](https://img.shields.io/github/actions/workflow/status/metmax/cbr-api-php/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/metmax-io/cbr-api-php/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/metmax/cbr-api-php.svg?style=flat-square)](https://packagist.org/packages/metmax-io/cbr-api-php)
 
 A PHP wrapper for interacting with CBR Top Webservices API and supports the AuthenticationService, ReservationService, ReferenceDataService.
 This way you are able to handle the following operations:
@@ -29,10 +29,21 @@ cp .env.dist .env
 ```
 
 ## Usage
+The API consists of 3 endpoints:
+- Authentication
+- ReferenceData
+- Reservation
+
+The API's are separated in different folders but can be used similarly.
+
+### Get a list of physical CBR locations
 
 ```php
-$skeleton = new MetMax\Cbr();
-echo $skeleton->echoPhrase('Hello, MetMax!');
+use MetMax\Cbr\ReferenceData\ReferenceDataClientFactory;
+use MetMax\Cbr\ReferenceData\Type\LocationsRequest;
+
+$referenceData = ReferenceDataClientFactory::factory('username', 'password');
+$locations = $referenceData->getLocations(new LocationsRequest());
 ```
 
 ## Testing

@@ -28,7 +28,7 @@ trait InteractWithReservation
             return $this->reservationClient;
         }
 
-        $recorder = new FilesystemRecorder(VCR_CASSETTE_DIR . '/Reservation');
+        $recorder = new FilesystemRecorder(VCR_CASSETTE_DIR.'/Reservation');
         $namingStrategy = new PathNamingStrategy(['hash_body_methods' => []]);
         $caller = new EngineCaller(
             DefaultEngineFactory::create(
