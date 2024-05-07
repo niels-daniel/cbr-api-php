@@ -1,12 +1,12 @@
 {
-    "name": "metmax-io/cbr-api-php",
+    "name": "niels-daniel/cbr-api-php",
     "description": "CBR Top WSAPI client wrapper",
     "keywords": [
         "MetMax",
         "cbr-api-php",
         "CBR Top"
     ],
-    "homepage": "https://github.com/metmax-io/cbr-api-php",
+    "homepage": "https://github.com/niels-daniel/cbr-api-php",
     "license": "MIT",
     "authors": [
         {
